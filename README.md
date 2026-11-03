@@ -33,7 +33,7 @@ Eine Spezifikation ist ein Wörterbuch {(j, k): c}: Term c·zʲ·Fᵏ mit c Farb
 
 ## Befunde (gemessen, keine Behauptungen)
 
-Jede Zahl steht in `tests/test_claims.py`, `tests/test_algorithm.py`, `tests/test_verdicts.py` oder `tests/test_oracle_symbolische_methode.py`. **Zeiten** (Aufzählen gegen Gleichung gegen Formel) stehen in keinem Test; Phase 0 maß sie als Größenordnung (Catalan, n = 12: Aufzählen 0,36 s, Gleichung 0,09 ms; n = 1000: Gleichung 0,56 s).
+Jede Zahl steht in `tests/test_claims.py`, `tests/test_algorithm.py`, `tests/test_verdicts.py` oder `tests/test_oracle_symbolische_methode.py`. **Zeiten** (Aufzählen gegen Gleichung gegen Formel) stehen in keinem Test; Phase 0 maß sie als Größenordnung (Catalan, n = 12: Aufzählen 0,36 s, Gleichung 0,09 ms; n = 1000: Gleichung 0,56 s); sie hängen vom Rechner ab, eine unabhängige Nachmessung ergab dieselbe Größenordnung (0,18 s, 0,047 ms, 0,32 s).
 
 | Frage | Befund |
 |---|---|
@@ -46,7 +46,7 @@ Jede Zahl steht in `tests/test_claims.py`, `tests/test_algorithm.py`, `tests/tes
 | Eindeutigkeit | E → E E \| a: Ableitungen für aⁿ 1, 1, 2, 5, 14, 42, 132, 429 (n = 1 bis 8), verschiedene Wörter jeweils 1 |
 | Wachstumsradius | Binärbäume ρ = 1/4 (τ = 2), Motzkin 1/3 (τ = 3), Schröder 3 − 2√2 (τ = 1 + √2), ternär 4/27 (τ = 1,5); linear: 1/3 (Wörter), (√5 − 1)/2 (Fibonacci-Wörter), 0,5437 (Kompositionen, Tribonacci-Konstante 1,8393 als Kehrwert); Abweichung höchstens 10⁻¹² |
 | Quotient a(n+1)/a(n) gegen 1/ρ | **nichtlinear nur wie 1/n:** Binärbäume 12,5 % (n = 10), etwa 1,5 % (n = 100), α bei n = 400 etwa 1,49; bei n = 1000 liegt α der vier verschachtelten Presets zwischen 1,49 und 1,50. **Linear exponentiell schnell:** Fibonacci-Wörter etwa 3,5·10⁻⁵ bei n = 10 und unter 10⁻¹² bei n = 100 |
-| Zufallsspezifikationen, Quotient bei n = 200 (Experiment 5, 219 nichtlineare) | aperiodisch **154 von 154** auf 2 % genau (größte Abweichung unter 0,75 %); periodisch (Periode 2) **65 von 65** mit Schritt p (unter 1,5 %), **0 von 65** ohne Schritt |
+| Zufallsspezifikationen, Quotient bei n = 200 (Experiment 5, 219 nichtlineare) | aperiodisch **154 von 154** auf 2 % genau (größte Abweichung unter 0,75 %); periodisch (Periode 2) **65 von 65** mit Schritt p (unter 1,5 %), **0 von 65** ohne Schritt (zwangsläufig: bei Periode 2 ist a(201) = 0, die Abweichung beträgt 100 %, das ist kein Messbefund) |
 | Phase 0, Quotient bei n = 400 (Seeds ab 7000, 202 nichtlineare) | aperiodisch 157, periodisch 45; alle auf 2 % genau; α bei den aperiodischen zwischen 1,489 und 1,494 (n^(−3/2)) |
 | Brücke zu Stück 2 | Wörter aus A, B ohne AA (Stück 2: 1, 2, 3, 5, 8, …) sind die Kompositionen in 1 und 2 von n + 1 (1, 1, 2, 3, 5, …), in 11 von 11 Gliedern gleich |
 | Diskriminanten | Binärbäume Δ = 1 − 4z; Motzkin Δ = 1 − 2z − 3z²; große Schröder-Zahlen Δ = 1 − 6z + z² |
@@ -75,7 +75,7 @@ Jede Zahl steht in `tests/test_claims.py`, `tests/test_algorithm.py`, `tests/tes
 - **Browser:** Seitentext und Zahlen im frischen Tab mit festem Viewport (1100 × 800) geprüft (Binärbäume, n = 10), Diagrammbreite 630 px, Achsenbereiche sinnvoll.
 - **Nicht gemacht:** Mutationstests (seit 2026-10-28 nicht mehr verlangt), Docker-Lauf der Linux-CI (Docker fehlt auf diesem Rechner; die CI nach dem Push entscheidet).
 
-505 Tests (`pytest tests`), zuletzt in etwa zweieinhalb Minuten auf dem Entwicklungsrechner (Messung, nicht getestet).
+505 Tests (`pytest tests`), zuletzt in rund 90 Sekunden auf dem Entwicklungsrechner (Messung, nicht getestet).
 
 ## Dateistruktur
 

@@ -182,7 +182,7 @@ verdict(verdict_equation(eq_rows))
 st.markdown("---")
 
 st.subheader("🔬 Experiment 2: Raten scheitert bei Verschachtelung")
-st.caption("Stück 1 hat Rekursionen mit konstanten Koeffizienten aus den ersten Gliedern geraten. Das gelingt genau, wenn F rational ist.")
+st.caption(f"Stück 1 hat Rekursionen mit konstanten Koeffizienten aus den ersten Gliedern geraten. Das gelingt, wenn F rational mit kleiner Ordnung (hier höchstens {C.GUESS_RMAX}) ist.")
 guess_res = _guess(spec_key)
 st.dataframe([{"Art": guess_res["kind"], "kleinste geratene Ordnung": "keine" if guess_res["order"] is None else str(guess_res["order"]),
                "Glieder geprüft": guess_res["terms"]}], hide_index=True, width="stretch")
