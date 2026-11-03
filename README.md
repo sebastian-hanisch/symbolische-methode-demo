@@ -1,7 +1,6 @@
 # Symbolische Methode – Struktur beschreiben, Zahlen erhalten – Streamlit-Demo
 
-<!-- TODO nach dem Deploy: direkt hierher den Live-Link setzen (Leerzeile davor und danach):
-**[→ Demo live ausprobieren](https://sebastianhanisch-symbolische-methode-demo.streamlit.app/)** -->
+**[→ Demo live ausprobieren](https://sebastianhanisch-symbolische-methode-demo.streamlit.app/)**
 
 Stück 3 von 16 der Reihe **„Abzählen und erzeugende Funktionen“** in der „Konzepte“-Reihe für die Website „Sebastian Hanisch – Operations Research und Machine Learning“ (die Linie wird erst vollständig veröffentlicht). Vorgänger sind `aufzaehlen-rekursion-demo` (Stück 1: Zustandsrekursion) und `rationale-ef-demo` (Stück 2: der Bruch P/Q aus dem Automaten). Diese Demo schreibt die erzeugende Funktion **aus einer Beschreibung** hin: Atom = z, „oder“ = +, „und“ = ·, rekursiver Aufruf = F, also F = 1 + Σ c·zʲ·Fᵏ, und die Zahlen fallen aus der Gleichung. Eingabe ist die Gleichung als Text (Presets: Binärbäume, Motzkin-Pfade, große Schröder-Zahlen, ternäre Bäume, Fibonacci-Wörter, Wörter, Kompositionen, ein periodischer Fall). Kante zu Stück 2: Strukturen mit Verschachtelung (k ≥ 2) haben keinen endlichen Automaten, F ist dort **nicht** rational.
 
@@ -129,4 +128,4 @@ Gebaut mit Streamlit, Plotly und fpdf2.
 
 ---
 
-Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zu den Demos: [Interaktive Demos](https://sebastianhanisch.net/demos.html).
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Abzählen: von der Rekursion zur Verfahrenswahl](https://sebastianhanisch.net/konzepte-abzaehlen.html).
